@@ -34,37 +34,37 @@ const BalanceOptions = () => {
         </div>
       </div>
       <div className="grid grid-cols-3 w-[50%]  py-6 gap-6 pr-[7%]">
-        <div className="flex items-center justify-center border rounded-md bg-white">
+        <div className="flex items-center justify-center border rounded-md bg-white shadow-lg">
           <div className="flex flex-col gap-2 items-center">
             <IoMdAdd size={25} />
             <span>Add</span>
           </div>
         </div>
-        <div className="flex items-center justify-center border rounded-md bg-white">
+        <div className="flex items-center justify-center border rounded-md bg-white shadow-lg">
           <div className="flex flex-col gap-2 items-center">
             <GrFormSubtract size={25} />
             <span>Withdraw</span>
           </div>
         </div>
-        <div className="flex items-center justify-center border rounded-md bg-white">
+        <div className="flex items-center justify-center border rounded-md bg-white shadow-lg">
           <div className="flex flex-col gap-2 items-center">
             <LuSendHorizonal size={25} />
             <span>Send/Request</span>
           </div>
         </div>
-        <div className="flex items-center justify-center border rounded-md bg-white">
+        <div className="flex items-center justify-center border rounded-md bg-white shadow-lg">
           <div className="flex flex-col gap-2 items-center">
             <CiDollar size={25} />
             <span>Transfer USDC</span>
           </div>
         </div>
-        <div className="flex items-center justify-center border rounded-md bg-white">
+        <div className="flex items-center justify-center border rounded-md bg-white shadow-lg">
           <div className="flex flex-col gap-2 items-center">
             <TbCreditCardPay size={25} />
             <span>Pay Local</span>
           </div>
         </div>
-        <div className="flex items-center justify-center border rounded-md bg-white">
+        <div className="flex items-center justify-center border rounded-md bg-white shadow-lg">
           <div className="flex flex-col gap-2 items-center">
             <MdOutlineElectricBolt size={25} />
             <span>Auto Withdrawals</span>
