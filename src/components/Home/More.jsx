@@ -2,7 +2,7 @@ import marketing2 from "/images/marketing-primary-right.jpg";
 import marketing from "/images/marketing-primary.jpg";
 const More = () => {
   return (
-    <div className="bg-white py-2">
+    <div className="bg-white py-2 mt-20">
       <div className="mx-20 flex gap-4">
         <div className="flex w-full h-64  bg-home-bg shadow-lg rounded-md overflow-hidden">
           <div className="w-[70%] py-6 px-6">

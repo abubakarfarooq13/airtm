@@ -5,24 +5,44 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 const Layout = () => {
   const [header, setHeader] = useState(false);
-
   const changeBackground = () => {
-    console.log(window.scrollY);
+    console.log("hello");
+    if (window.scrollY > 80) {
+      setHeader(true);
+    } else {
+      setHeader(false);
+    }
   };
-  window.addEventListener("scroll", changeBackground);
+  window.addEventListener(
+    "scroll",
+    () => {
+      changeBackground();
+    },
+    false
+  );
+
   return (
     <>
       <div className="flex">
-        <div className="absolute">
+        <div className="absolute z-10">
           <Sidebar />
         </div>
         <div className="ml-24 w-full h-screen overflow-y-scroll  flex flex-col">
-          <main className="h-full w-full ">
-            <div className={!header ? "bg-home-bg" : "bg-white"}>
-              <Header />
-            </div>
-
+          {" "}
+          <div
+            className={
+              !header
+                ? "bg-home-bg fix sticky top-0 "
+                : "bg-white fix sticky top-0 shadow-md shadow-gray-400"
+            }
+          >
+            <Header />
+          </div>
+          <main className="h-full w-full">
+            {" "}
             <Outlet />
+            {console.log(window.scrollY)}
+            <div className="h-screen"></div>
           </main>
         </div>
       </div>

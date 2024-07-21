@@ -15,3 +15,7 @@
   background: rgb(221, 221, 221);
   border-radius: 50px;
 }
+
+.active {
+  background: rgb(229, 232, 235);
+}

@@ -17,42 +17,42 @@ export const Sidebarmenu = [
   {
     name: "add",
     icon: <IoMdAdd />,
-    path: "/",
+    path: "/add",
   },
   {
     name: "withdraw",
     icon: <GrFormSubtract />,
-    path: "/",
+    path: "/withdraw",
   },
   {
     name: "pay local",
     icon: <TbCreditCardPay />,
-    path: "/",
+    path: "/pay-local",
   },
   {
     name: "transfer usdc",
     icon: <CiDollar />,
-    path: "/",
+    path: "/transfer-usdc",
   },
   {
     name: "send/request",
     icon: <LuSendHorizonal />,
-    path: "/",
+    path: "/send-request",
   },
   {
     name: "activity",
     icon: <FaRegFileAlt />,
-    path: "/",
+    path: "/activity",
   },
   {
     name: "i'm a cashier",
     icon: <TbChartCircles />,
-    path: "/",
+    path: "/i-m-a-cashier",
   },
   {
     name: "get paid",
     icon: <LiaHandHoldingUsdSolid />,
-    path: "/",
+    path: "/get-paid",
   },
 ];
 
@@ -60,16 +60,16 @@ export const Sidebarfooter = [
   {
     name: "invite friends",
     icon: <IoShareSocialOutline />,
-    path: "/",
+    path: "/invite-friends",
   },
   {
     name: "help",
     icon: <GoInfo />,
-    path: "/",
+    path: "/help",
   },
   {
     name: "settings",
     icon: <CiSettings />,
-    path: "/",
+    path: "/settings",
   },
 ];

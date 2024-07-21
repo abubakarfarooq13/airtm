@@ -2,6 +2,7 @@ import { useState } from "react";
 import { GoPerson } from "react-icons/go";
 import { Sidebarfooter, Sidebarmenu } from "./Sidebardata";
 import { RxExit } from "react-icons/rx";
+import { NavLink } from "react-router-dom";
 const Sidebar = () => {
   const [hover, setHover] = useState(false);
   return (
@@ -31,45 +32,43 @@ const Sidebar = () => {
           </div>
         </div>
 
-        <div className="flex flex-col px-6 justify-between min-h-96 max-h-96 h-96 overflow-hidden">
-          <div>
-            {Sidebarmenu.map((item, index) => {
-              return (
-                <>
-                  <div
-                    key={index}
-                    className="flex gap-4 px-2 py-1 items-center"
-                  >
-                    <div className="text-2xl">{item.icon}</div>
-                    {hover && (
-                      <span className="uppercase text-nowrap font-bold text-sm text-gray-500">
-                        {item.name}
-                      </span>
-                    )}
-                  </div>
-                </>
-              );
-            })}
-          </div>
-          <div>
-            {Sidebarfooter.map((item, index) => {
-              return (
-                <>
-                  <div
-                    key={index}
-                    className="flex gap-4 px-2 py-1 items-center"
-                  >
-                    <div className="text-2xl">{item.icon}</div>
-                    {hover && (
-                      <span className="uppercase text-nowrap font-bold text-sm text-gray-500">
-                        {item.name}
-                      </span>
-                    )}
-                  </div>
-                </>
-              );
-            })}
-          </div>
+        <div className="flex flex-col justify-between min-h-96 max-h-96 h-96 overflow-hidden cursor-pointer ">
+          {Sidebarmenu.map((item, index) => {
+            return (
+              <>
+                <NavLink
+                  to={item.path}
+                  key={index}
+                  className="flex gap-4 px-8 py-1 items-center cursor-pointer hover:bg-slate-200"
+                >
+                  <div className="text-2xl">{item.icon}</div>
+                  {hover && (
+                    <span className="uppercase text-nowrap font-bold text-sm text-gray-500">
+                      {item.name}
+                    </span>
+                  )}
+                </NavLink>
+              </>
+            );
+          })}
+          {Sidebarfooter.map((item, index) => {
+            return (
+              <>
+                <NavLink
+                  key={index}
+                  to={item.path}
+                  className="flex gap-4 px-8 py-1 items-center hover:bg-slate-200"
+                >
+                  <div className="text-2xl">{item.icon}</div>
+                  {hover && (
+                    <span className="uppercase text-nowrap font-bold text-sm text-gray-500">
+                      {item.name}
+                    </span>
+                  )}
+                </NavLink>
+              </>
+            );
+          })}
         </div>
 
         <hr />
